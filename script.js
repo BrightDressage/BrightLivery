@@ -14,11 +14,17 @@
 (function(){
   var AVAILABILITY={full:'full',holiday:'open',short:'open'};
   var NAMES={full:'Full Livery',holiday:'Holiday Livery',short:'Short Stay'};
-  document.querySelectorAll('.avail').forEach(function(el){
-    var k=el.getAttribute('data-service'),open=AVAILABILITY[k]==='open',n=NAMES[k];
-    el.classList.add(open?'is-open':'is-full');
-    el.innerHTML='<span class="status"><span class="dot" aria-hidden="true"></span>'+(open?'Spaces available':'Currently full')+'</span><a class="btn" href="#contact">'+(open?'Enquire about '+n:'Join the waitlist')+'</a>';
-    el.querySelector('a').addEventListener('click',function(){
+  document.querySelectorAll('.rate[data-service]').forEach(function(card){
+    var k=card.getAttribute('data-service'),open=AVAILABILITY[k]==='open',n=NAMES[k];
+    var st=document.createElement('p');
+    st.className='status '+(open?'is-open':'is-full');
+    st.innerHTML='<span class="dot" aria-hidden="true"></span>'+(open?'Spaces available':'Currently full');
+    card.querySelector('h3').parentNode.appendChild(st);
+    var a=document.createElement('a');
+    a.className='btn';a.href='#contact';a.textContent=open?'Enquire now':'Join the waitlist';
+    a.setAttribute('aria-label',(open?'Enquire about ':'Join the waitlist for ')+n);
+    card.querySelector('.price').appendChild(a);
+    a.addEventListener('click',function(){
       document.getElementById('f-service').value=(!open&&k==='full')?'Join Full Livery waitlist':n;
       var m=document.getElementById('f-msg');
       if(!open&&!m.value)m.value='Please add me to the '+n+' waitlist. ';

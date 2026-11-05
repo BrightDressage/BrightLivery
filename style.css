@@ -118,22 +118,19 @@ nav a:hover{text-decoration:underline;text-underline-offset:4px}
 .arrive .inc{padding:0 0 30px}
 .arrive .inc>p{margin-bottom:20px}
 .arrive .inc li{border-color:var(--green-soft)}
-.avail{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:6px}
-.status{display:inline-flex;align-items:center;gap:10px;font-weight:600}
-.dot{width:12px;height:12px;border-radius:50%;background:var(--dot);flex:none}
+.status{display:flex;align-items:center;gap:9px;font-weight:600;font-size:1rem;margin-top:12px}
+.dot{width:11px;height:11px;border-radius:50%;background:var(--dot);flex:none}
 .is-open{--dot:#22b24c}
 .rate.feature .is-open{--dot:#4be37a}
 .is-full{--dot:#c9822b}
 .is-open .dot{animation:glow 2.2s ease-in-out infinite}
 @keyframes glow{0%,100%{box-shadow:0 0 3px 1px var(--dot)}50%{box-shadow:0 0 12px 4px var(--dot)}}
-.avail .btn{padding:.6em 1.2em}
-.rate.feature .avail .btn{background:var(--cream);color:var(--green);border-color:var(--cream)}
-.rate.feature .avail .btn:hover{background:var(--cream-deep)}
-.rate.soft .avail{grid-row:3}
-.rate.soft .more{grid-row:4}
+.price .btn{margin-top:12px;padding:.55em 1.1em;font-size:.95rem;text-align:center}
+.rate.feature .price .btn{background:var(--cream);color:var(--green);border-color:var(--cream)}
+.rate.feature .price .btn:hover{background:var(--cream-deep)}
 @media (prefers-reduced-motion:reduce){.is-open .dot{animation:none;box-shadow:0 0 6px 2px var(--dot)}}
 .wa{width:1.15em;height:1.15em;vertical-align:-.2em;margin-right:.5em}
-.rate.soft .more{grid-row:4;margin-top:4px}
+.rate.soft .more{grid-row:3;margin-top:4px}
 .rate.soft .more summary{padding:.4em .9em;font-size:1rem}
 .mini{list-style:none;margin:14px 0 0;padding:0}
 .mini li{padding-block:6px;border-bottom:1px solid var(--green-soft)}
@@ -196,3 +193,8 @@ footer{background:var(--green-deep);color:var(--cream);font-size:1rem}
   .btn{padding:.7em 1.2em}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+@media (max-width:560px){
+  .rate.soft{grid-template-columns:minmax(0,1fr)}
+  .rate.soft .desc,.rate.soft .more{grid-column:auto;grid-row:auto}
+  .rate.soft .price{text-align:left}
+}
