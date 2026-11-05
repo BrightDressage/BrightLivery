@@ -202,3 +202,6 @@ footer{background:var(--green-deep);color:var(--cream);font-size:1rem}
 .rate.feature .groups{grid-template-columns:repeat(3,minmax(0,1fr))}
 .rate.feature .extras ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px}
 @media (max-width:760px){.rate.feature .groups,.rate.feature .extras ul{grid-template-columns:minmax(0,1fr)}}
+.tile.photo{position:relative;padding:0;overflow:hidden;background:var(--green-deep);color:var(--cream)}
+.tile.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.tile.photo span{position:relative;margin-top:auto;padding:30px 16px 14px;background:linear-gradient(transparent,rgba(20,51,25,.85))}
