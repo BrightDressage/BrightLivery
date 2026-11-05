@@ -198,3 +198,7 @@ footer{background:var(--green-deep);color:var(--cream);font-size:1rem}
   .rate.soft .desc,.rate.soft .more{grid-column:auto;grid-row:auto}
   .rate.soft .price{text-align:left}
 }
+.rate.feature .inc-grid{grid-template-columns:minmax(0,1fr);gap:28px}
+.rate.feature .groups{grid-template-columns:repeat(3,minmax(0,1fr))}
+.rate.feature .extras ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px}
+@media (max-width:760px){.rate.feature .groups,.rate.feature .extras ul{grid-template-columns:minmax(0,1fr)}}
