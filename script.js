@@ -12,8 +12,8 @@
 
 /* AVAILABILITY: change 'open' to 'full' and republish. */
 (function(){
-  var AVAILABILITY={full:'full',holiday:'open',short:'open'};
-  var NAMES={full:'Full Livery',holiday:'Holiday Livery',short:'Short Stay'};
+  var AVAILABILITY={full:'full',camp:'open',holiday:'open',short:'open'};
+  var NAMES={full:'Full Livery',camp:'Boot Camp',holiday:'Holiday Livery',short:'Short Stay'};
   document.querySelectorAll('.rate[data-service]').forEach(function(card){
     var k=card.getAttribute('data-service'),open=AVAILABILITY[k]==='open',n=NAMES[k];
     var st=document.createElement('p');
