@@ -217,3 +217,4 @@ footer{background:var(--green-deep);color:var(--cream);font-size:1rem}
 .hero .btn.ghost{background:transparent;color:var(--cream)}
 .hero .btn.ghost:hover{background:var(--cream);color:var(--green)}
 @media (max-width:860px){.hero-in{padding-block:72px 120px}.hero::after{background:linear-gradient(180deg,rgba(20,51,25,.5) 0%,rgba(20,51,25,.2) 60%,rgba(20,51,25,0) 100%)}}
+.credit{flex-basis:100%;font-size:.9rem;opacity:.8}
