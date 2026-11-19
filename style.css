@@ -277,3 +277,9 @@ img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-tou
 .bd-photo figcaption{font:400 .85rem/1.4 Inter,sans-serif;color:rgba(245,244,240,.6);margin-top:10px}
 @media (max-width:860px){.bd-grid{grid-template-columns:minmax(0,1fr);gap:32px}.bd-photo{max-width:420px}}
 
+
+/* Before your horse arrives: box inside the pricing board */
+.board .arrive{grid-column:1/-1;padding:0 26px}
+.board .arrive .more summary{padding:20px 0}
+.board .arrive .inc{padding:0 0 26px}
+@media (max-width:560px){.board .arrive{padding:0 20px}}
