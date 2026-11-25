@@ -283,3 +283,4 @@ img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-tou
 .board .arrive .more summary{padding:20px 0}
 .board .arrive .inc{padding:0 0 26px}
 @media (max-width:560px){.board .arrive{padding:0 20px}}
+.credit a{color:inherit;text-decoration:underline;text-underline-offset:3px}
